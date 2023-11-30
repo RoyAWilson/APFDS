@@ -1,0 +1,3 @@
+Broadcasting:
+
+Allows performing arithmetic operations on arrays of different sizes and shapes
