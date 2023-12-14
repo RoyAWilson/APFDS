@@ -7,7 +7,7 @@ Vector Machines
 import numpy as np
 import matplotlib
 import matplotlib.pyplot as plt
-import pandas
+# import pandas
 from sklearn import svm, datasets
 
 # Load Iris dataset - comes in as np array Target is the dependant variable to be predicted
