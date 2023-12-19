@@ -4,18 +4,17 @@ Lecture 29 - Customr Segmentation
 Using Clustering methods
 '''
 
-import pandas as pd
 import datetime
+import pandas as pd
 import seaborn as sns
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.preprocessing import LabelEncoder, StandardScaler
 from sklearn.decomposition import PCA
 from sklearn.cluster import KMeans
-from yellowbrick.cluster import kelbow_visualizer, silhouette_visualizer
-from mpl_toolkits.mplot3d import Axes3D
 from sklearn.cluster import AgglomerativeClustering
-from yellowbrick.datasets import load_nfl
+from mpl_toolkits.mplot3d import Axes3D
+
 
 # Added parse_dates and dayFirst though not covered in the lecture
 
@@ -141,7 +140,7 @@ df.drop(df[(df['Spent'] > 145)].index, inplace=True)
 
 # Encode textual fields with numberic code
 
-s = (df.dtypes == 'object')
+s = df.dtypes == 'object'
 object_cols = list(s[s].index)
 le = LabelEncoder()
 for i in object_cols:
